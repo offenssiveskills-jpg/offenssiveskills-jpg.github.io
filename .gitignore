@@ -6,8 +6,6 @@
 .env.production.local
 
 # Portfolio directory
-OffensiveSkils/
-portfolio/
 n8n-github-agent/
 upwork-chatbot/
 

@@ -1,0 +1,6 @@
+# Ignore backups
+*.bak
+index.html.bak
+
+# Ignore the heavy original video in the portfolio repo
+media/OffensiveSkills_LinkedIn_Pipeline_n8n.mp4

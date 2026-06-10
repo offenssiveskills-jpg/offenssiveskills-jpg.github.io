@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Hippolyte Donfack — Architecte SecOps & Automatisation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --secondary: #475569;
+      --accent: #008b8b;
+      --accent-light: #e0f2f1;  
+      --bg-light: #f8fafc;      
+      --border-color: #e2e8f0;  
+      --text-main: #334155;     
+      --gradient: linear-gradient(90deg, #008b8b 0%, #06b6d4 100%);
+    }
+    * { box-sizing: border-box; }
+    @page { margin: 12mm 15mm; }
+    body {
+      margin: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-main);
+      background-color: #ffffff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      line-height: 1.5;
+    }
+    .top-bar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: var(--gradient);
+      z-index: 100;
+    }
+    .container {
+      max-width: 210mm;
+      margin: 0 auto;
+    }
+    .header-main {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 15px;
+      margin-bottom: 12px;
+      margin-top: 10px;
+    }
+    h1 { font-size: 26pt; font-weight: 800; color: var(--primary); margin: 0; line-height: 1.1; letter-spacing: -0.03em; }
+    .subtitle { font-size: 10pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin: 6px 0 0 0; }
+    
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      background: var(--bg-light);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 20px;
+    }
+    .contact-item { display: flex; align-items: center; gap: 8px; font-size: 8.5pt; color: var(--secondary); font-weight: 500;}
+    .contact-item svg { color: var(--accent); flex-shrink: 0; }
+    .contact-item a { color: var(--secondary); text-decoration: none; }
+    
+    .section-title {
+      font-size: 10.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em;
+      color: var(--primary); border-bottom: 1.5px solid var(--accent-light);
+      padding-bottom: 5px; margin-top: 22px; margin-bottom: 12px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section-title svg { color: var(--accent); }
+    
+    p.summary { font-size: 9.5pt; text-align: justify; margin: 0 0 20px 0; }
+    
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+    .card { background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; page-break-inside: avoid; }
+    .card-title { font-size: 8.5pt; font-weight: 700; text-transform: uppercase; color: var(--primary); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag { background: #ffffff; border: 1px solid var(--border-color); font-size: 8pt; font-weight: 600; padding: 3px 8px; border-radius: 4px; }
+    
+    .exp-item { margin-bottom: 16px; page-break-inside: avoid; }
+    .exp-header { margin-bottom: 4px; }
+    .job-title { font-size: 10.5pt; font-weight: 700; color: var(--primary); margin: 0; }
+    .company { color: var(--accent); }
+    .exp-meta { display: flex; justify-content: space-between; font-size: 8pt; font-weight: 600; color: var(--secondary); margin-bottom: 6px; }
+    
+    ul { margin: 0; padding-left: 16px; }
+    li { font-size: 9pt; color: var(--text-main); margin-bottom: 5px; text-align: justify; }
+    li::marker { color: var(--accent); }
+
+    .certs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .cert-card { background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 6px; padding: 10px; display: flex; align-items: center; gap: 10px; page-break-inside: avoid; }
+    .cert-name { font-size: 8.5pt; font-weight: 700; color: var(--primary); }
+    .cert-meta { font-size: 7.5pt; color: var(--secondary); margin-top: 2px; }
+  </style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="container">
+    
+    <div class="header-main">
+      <div class="name-title">
+        <h1>Hippolyte Donfack</h1>
+        <div class="subtitle">Architecte SecOps & Automatisation (Garde du Corps Numérique)</div>
+      </div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <a href="tel:+237675853296">+237 675 85 32 96</a>
+      </div>
+      <div class="contact-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        <a href="mailto:offenssiveskills@gmail.com">offenssiveskills@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        <a href="https://linkedin.com/in/donfackhippolyte" target="_blank">linkedin.com/in/donfackhippolyte</a>
+      </div>
+      <div class="contact-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+        <a href="https://offenssiveskills-jpg.github.io" target="_blank">Portfolio SecOps</a>
+      </div>
+      <div class="contact-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        <a href="https://github.com/offenssiveskills-jpg" target="_blank">offenssiveskills-jpg</a>
+      </div>
+    </div>
+
+    <div class="section-title">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      Profil Professionnel
+    </div>
+    <p class="summary">
+      Expert en Cybersécurité Offensive et Architecte d'Automatisations avec plus de 5 ans d'expérience. Je conçois des solutions On-Premise robustes et sécurisées pour les dirigeants et organisations critiques. Mon approche fusionne l'intelligence économique (OSINT), les tests d'intrusion rigoureux (Pentest) et les workflows intelligents (n8n, IA locales). Avec plus de 200 automatisations livrées et 100% de clients protégés, je transforme la résilience opérationnelle des organisations (Finance, Gov, Fintech) en garantissant la confidentialité absolue de leurs données (infrastructures air-gapped, conformité COBAC).
+    </p>
+
+    <div class="section-title">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+      Compétences Clés
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          Cybersécurité & SecOps
+        </div>
+        <div class="tags">
+          <span class="tag">Pentest & Red Teaming</span>
+          <span class="tag">OSINT & Threat Intel</span>
+          <span class="tag">Conformité (COBAC, PCI-DSS)</span>
+          <span class="tag">DevSecOps / CI/CD</span>
+          <span class="tag">Architecture Air-gapped</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          Automatisation & IA
+        </div>
+        <div class="tags">
+          <span class="tag">n8n (Certifié L1/L2)</span>
+          <span class="tag">Python & Bash</span>
+          <span class="tag">Agents IA Locaux (Mistral)</span>
+          <span class="tag">OCR & Webhooks</span>
+          <span class="tag">Pipelines On-Premise</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+      Réalisations Majeures (Études de Cas)
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header"><h3 class="job-title">Secteur Finance — <span class="company">Automatisation & Conformité COBAC</span></h3></div>
+      <ul>
+        <li>Audit SecOps complet d'une banque régionale et remédiation proactive des vulnérabilités.</li>
+        <li>Déploiement d'un pipeline n8n On-Premise générant les rapports réglementaires avec zéro non-conformité depuis 1 an.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header"><h3 class="job-title">Institution Gouvernementale — <span class="company">OSINT & Détection de Menaces</span></h3></div>
+      <ul>
+        <li>Mise en place d'une cellule de veille automatisée (Mistral AI + n8n) contre le phishing ciblé.</li>
+        <li>Détection et neutralisation de 2 campagnes critiques, durcissement des accès administratifs.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header"><h3 class="job-title">Logistique Internationale — <span class="company">Sécurisation des Flux Douaniers</span></h3></div>
+      <ul>
+        <li>Création d'un pipeline automatisé de validation documentaire douanière avec extraction OCR locale.</li>
+        <li>Réduction des fraudes à 100% sur un volume de plus de 200 expéditions par jour.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header"><h3 class="job-title">Fintech Émergente — <span class="company">Pentest & Certification PCI-DSS</span></h3></div>
+      <ul>
+        <li>Conduite d'un pentest boîte noire intensif, remédiation de 5 failles critiques 0-day.</li>
+        <li>Accompagnement technique jusqu'à l'obtention de la certification PCI-DSS, intégration de scans DevSecOps au CI/CD.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header"><h3 class="job-title">Cabinet de Conseil — <span class="company">Cyber Intel Autopilot On-Premise</span></h3></div>
+      <ul>
+        <li>Conception d'un agent autonome d'intelligence économique, 100% hermétique (air-gapped) pour garantir la confidentialité client.</li>
+        <li>Automatisation totale des livrables, générant plus de 120 heures économisées par semaine.</li>
+      </ul>
+    </div>
+
+    <div class="section-title">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+      Parcours Professionnel
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <h3 class="job-title">Architecte SecOps & Automatisation (Garde du Corps Numérique)</h3>
+      </div>
+      <div class="exp-meta">
+        <span>Indépendant / OffensiveSkills</span>
+        <span>2019 – Présent (5+ ans d'expérience)</span>
+      </div>
+      <ul>
+        <li>Audit et sécurisation d'infrastructures critiques, déploiement d'agents IA pour la Threat Intelligence.</li>
+        <li>Création d'automatisations sécurisées, formation des équipes techniques et conception de plans de réponse aux incidents.</li>
+      </ul>
+    </div>
+
+    <div class="section-title">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 11 2 2 4-4"></path></svg>
+      Certifications Professionnelles
+    </div>
+    
+    <div class="certs-grid">
+      <div class="cert-card">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" class="cert-icon"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+        <div>
+          <div class="cert-name">n8n Certified Workflow Creator (L1 & L2)</div>
+          <div class="cert-meta">n8n • 2025</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" class="cert-icon"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+        <div>
+          <div class="cert-name">Red Team Operations Management</div>
+          <div class="cert-meta">Red Team Leaders • 2026</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" class="cert-icon"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+        <div>
+          <div class="cert-name">Threat Intelligence & Governance Analyst</div>
+          <div class="cert-meta">Red Team Leaders • 2026</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" class="cert-icon"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+        <div>
+          <div class="cert-name">Cyberzone Certified Pentester (CCP)</div>
+          <div class="cert-meta">CyberZone • 2025</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" class="cert-icon"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+        <div>
+          <div class="cert-name">Cisco Ethical Hacker</div>
+          <div class="cert-meta">Cisco Networking Academy • 2025</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" class="cert-icon"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+        <div>
+          <div class="cert-name">Cybersecurity Educator Professional</div>
+          <div class="cert-meta">Red Team Leaders • 2026</div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>
